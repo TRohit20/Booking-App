@@ -22,7 +22,12 @@ func main(){
 	var userName string
 	var userTickets int
 	// Ask fro user input or Initialisation
-	userName = "Tom"
-	userTickets = 2
+	// userName = "Tom"
+	// userTickets = 2
+
+	// Taking a input, We do that using scan func and pointer 
+	fmt.Scan(&userName)
+	fmt.Scan(&userTickets)
 	fmt.Printf("The user %v booked %v tickets. \n",	userName,userTickets)
+
 }
