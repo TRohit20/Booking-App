@@ -5,5 +5,11 @@ import "fmt"
 // Google it or simple read in the GOlang Documentaion
 
 func main(){
-	fmt.Print("Hi, my name is Rohit")
+	var conferenceName = "Rohit's Crowd Work"
+	const conferenceTickets = 50
+
+	fmt.Println("Welcome to ", conferenceName, "booking Application")
+	fmt.Println("Hurry up! & Get your tickets here")
+
+
 }
