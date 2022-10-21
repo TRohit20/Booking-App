@@ -49,6 +49,11 @@ func main() {
 		fmt.Println("Enter how many tickets you'd like to purchase:")
 		fmt.Scan(&userTickets)
 
+		if userTickets > remainingTickets {
+			fmt.Printf("Unfortunately, we only have %v tickets remaining! \n", remainingTickets)
+			continue
+		}
+
 		fmt.Printf("Thank you %v %v for booking %v tickets \n", firstName, lastName, userTickets)
 		fmt.Printf("You will receive a confirmation mail to your mail ID %v \n", email)
 
