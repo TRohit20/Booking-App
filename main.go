@@ -49,36 +49,37 @@ func main() {
 		fmt.Println("Enter how many tickets you'd like to purchase:")
 		fmt.Scan(&userTickets)
 
-		if userTickets > remainingTickets {
+		if userTickets <= remainingTickets {
+
+			fmt.Printf("Thank you %v %v for booking %v tickets \n", firstName, lastName, userTickets)
+			fmt.Printf("You will receive a confirmation mail to your mail ID %v \n", email)
+
+			bookings = append(bookings, firstName+" "+lastName)
+
+			remainingTickets -= userTickets
+
+			fmt.Printf("only %v tickets remaining \n", remainingTickets)
+
+			firstNames := []string{}
+
+			for _, booking := range bookings {
+				var names = strings.Fields(booking)
+				// var firstName = names[0]
+				firstNames = append(firstNames, names[0])
+			}
+
+			fmt.Printf("These are the First names of the bookings: %v \n", firstNames)
+
+			// Boolean expression
+			// var soldOut bool = remainingTickets == 0
+			soldOut := remainingTickets == 0
+			if soldOut {
+				fmt.Println("Sorry, The tickets for the conference are all sold. Better luck next time")
+				break
+			}
+		} else {
 			fmt.Printf("Unfortunately, we only have %v tickets remaining! \n", remainingTickets)
 			continue
-		}
-
-		fmt.Printf("Thank you %v %v for booking %v tickets \n", firstName, lastName, userTickets)
-		fmt.Printf("You will receive a confirmation mail to your mail ID %v \n", email)
-
-		bookings = append(bookings, firstName+" "+lastName)
-
-		remainingTickets -= userTickets
-
-		fmt.Printf("only %v tickets remaining \n", remainingTickets)
-
-		firstNames := []string{}
-
-		for _, booking := range bookings {
-			var names = strings.Fields(booking)
-			// var firstName = names[0]
-			firstNames = append(firstNames, names[0])
-		}
-
-		fmt.Printf("These are the First names of the bookings: %v \n", firstNames)
-
-		// Boolean expression
-		// var soldOut bool = remainingTickets == 0
-		soldOut := remainingTickets == 0
-		if soldOut {
-			fmt.Println("Sorry, The tickets for the conference are all sold. Better luck next time")
-			break
 		}
 	}
 
