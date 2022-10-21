@@ -46,3 +46,13 @@ or
 * ref_var := []data_type{}
 We dont have to keep track of the indices too. We just use the Append function which is in-built
 Adding or updating values to slices is different but the semantics or syntax of retrieving the value is same as array
+
+In reality, We have a web application where multiple users use it concurrently:
+So, we create a constant loop so the app keeps asking for function like bookign the ticket 
+Loop is used whenever you need something multiple times
+Loops in Golang are very simplified
+You only have 1 loop:
+For-loop of differnet types which can be used for different cases
+
+*** RANGE is a function in-built that allows us to iterate over any data structure 
+For arrays and slices, it provides or gives back the value of Index and element in it
