@@ -64,10 +64,17 @@ func main() {
 			var names = strings.Fields(booking)
 			// var firstName = names[0]
 			firstNames = append(firstNames, names[0])
-
 		}
 
 		fmt.Printf("These are the First names of the bookings: %v \n", firstNames)
+
+		// Boolean expression
+		// var soldOut bool = remainingTickets == 0
+		soldOut := remainingTickets == 0
+		if soldOut {
+			fmt.Println("Sorry, The tickets for the conference are all sold. Better luck next time")
+			break
+		}
 	}
 
 	// bookings[0] = firstName + " " + lastName
