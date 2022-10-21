@@ -1,0 +1,40 @@
+Go was developed by Google in 2007 
+It was open-sourced in 2009
+ Why was created?
+ Why is it created and why is it better?
+ Go or also called "Golang"
+Infrastructure changed a lot
+   - Scalable & Distributed
+   - Dynamic
+   - More Capacity
+Existing Programming Languages did not fully take advantage of it
+
+With in improvements it was possible to write apps that would execute tasks in parallel
+Multi-threading concept. It makes apps fast and simple but also comes with it's own set of issues
+For example, Concurrency:
+Concurrency is about dealing with lots of things at once
+ Developers need to write code to prevent conflicts
+     when tasks run in parallel,accessing shared data. 
+     Examples: Google docs(Editing same doc by two users) or Ticket booking where two people wanna book the last ticket
+Programming langs either have built in or Non builtin Concurrency mechanisms but the code is complex
+Expensive and slow.
+This is where GO outshines. Go is designed to run on multiple cores and built to support Concurrency
+It is also cheap and easy in GO.
+So, Some main Use cases of GO would be:
+To write applications that need to be performant
+And will run on modern scaled and distributed Infrastructure or systems with 100s of servers typically on cloud platform.
+
+Charactteristics of GO:
+The Language attempts to combine the best of two worlds by using simple and easy to write/read syntaxes like in python and the efficiency and safety of low-level static lang like C++.
+Go is mostly used on Server or Backend side(Web,Microservices or DB services)
+Many cloud technologies or technologies that run on modern cloud environments are written in Go. Example: Docker or Kubernetes or Vault 
+Simple syntax, so easy to read and maintain over time
+Go apps can be built very fast,start up and run.
+It is also Resource Efficient. Requires fewer resources
+It is also a Compile Language. i.e Compiles quickly into a single binary code and deploy and run it on any platform or OS easily in a consistent way. Same binary across any platform
+
+Due to all this simplicity and speed, GO is becoming popular to write automation app or CLO for devops or SRE.
+
+Running the Go Program:
+First, we need to create a Go.mod file that is making it a project
+In GO, everything works in Packages. 
