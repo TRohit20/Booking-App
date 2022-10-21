@@ -37,7 +37,7 @@ func main() {
 
 	// Taking a input, We do that using scan func and pointer
 
-	for {
+	for remainingTickets > 0 || len(bookings) < 50 {
 		fmt.Println("Enter your First name:")
 		fmt.Scan(&firstName)
 		fmt.Println("Enter your Last name:")
