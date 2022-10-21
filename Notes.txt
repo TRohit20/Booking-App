@@ -64,3 +64,7 @@ Feilds is a In-built function from the strings package and it splits a string us
 Conditional statements like IF else are used to break loops or check things
 
 ** Continue ** is used to make the loop skip the remainder of the body and immediately retest its condition
+
+*** USER INPUT VALIDATION 
+It is must in order to make sure the app handles any bad user input or to make sure the app doesnt crash due to wrong inputs
+so we need to verify the piece of data user provides

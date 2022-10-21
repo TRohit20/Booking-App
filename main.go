@@ -49,7 +49,11 @@ func main() {
 		fmt.Println("Enter how many tickets you'd like to purchase:")
 		fmt.Scan(&userTickets)
 
-		if userTickets <= remainingTickets {
+		validName := len(firstName) >= 2 && len(lastName) >= 2
+		validMail := strings.Contains(email, "@")
+		validTickets := userTickets > 0 && userTickets <= remainingTickets
+
+		if validMail && validName && validTickets {
 
 			fmt.Printf("Thank you %v %v for booking %v tickets \n", firstName, lastName, userTickets)
 			fmt.Printf("You will receive a confirmation mail to your mail ID %v \n", email)
@@ -78,7 +82,7 @@ func main() {
 				break
 			}
 		} else {
-			fmt.Printf("Unfortunately, we only have %v tickets remaining! \n", remainingTickets)
+			fmt.Println("You entered Invalid details, please check and re-enter")
 			continue
 		}
 	}
