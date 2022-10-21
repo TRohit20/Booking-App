@@ -1,27 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // HOw do you know which input or file we need is in which package?
 // Google it or simple read in the GOlang Documentaion
 
-func main(){
+func main() {
 	var conferenceName = "Rohit's Crowd Work"
 	const conferenceTickets = 50
 	var remainingTickets uint = 50
-
 
 	// An alternative i.e Syntactic Sugar, IT ONLY APPLIES TO VAR NOT CONST/CONSTANTS
 	// conferenceName := "Rohit"
 
 	// var bookings [50]string //Array
 
-	var bookings []string  //Slices
-	
+	var bookings []string //Slices
+
 	// fmt.Println("Welcome to ", conferenceName, "booking Application")
 	// Printf instead of 'ln'
-	fmt.Printf("Welcome to %v booking application \n",conferenceName)
-	fmt.Println("We have a total of", conferenceTickets,"tickets, of which only ",remainingTickets, " are remaining")
+	fmt.Printf("Welcome to %v booking application \n", conferenceName)
+	fmt.Println("We have a total of", conferenceTickets, "tickets, of which only ", remainingTickets, " are remaining")
 	fmt.Println("Hurry up! & Get your tickets here")
 
 	// Decalartion
@@ -33,9 +35,9 @@ func main(){
 	// userName = "Tom"
 	// userTickets = 2
 
-	// Taking a input, We do that using scan func and pointer 
+	// Taking a input, We do that using scan func and pointer
 
-	for{
+	for {
 		fmt.Println("Enter your First name:")
 		fmt.Scan(&firstName)
 		fmt.Println("Enter your Last name:")
@@ -47,22 +49,28 @@ func main(){
 		fmt.Println("Enter how many tickets you'd like to purchase:")
 		fmt.Scan(&userTickets)
 
-		fmt.Printf("Thank you %v %v for booking %v tickets \n",firstName,lastName,userTickets)
-		fmt.Printf("You will receive a confirmation mail to your mail ID %v \n",email)
+		fmt.Printf("Thank you %v %v for booking %v tickets \n", firstName, lastName, userTickets)
+		fmt.Printf("You will receive a confirmation mail to your mail ID %v \n", email)
 
-		bookings = append(bookings, firstName + " " + lastName)
-		
+		bookings = append(bookings, firstName+" "+lastName)
+
 		remainingTickets -= userTickets
 
-		fmt.Printf("only %v tickets remaining \n",remainingTickets)
+		fmt.Printf("only %v tickets remaining \n", remainingTickets)
 
-		fmt.Printf("These are all the bookings %v \n",bookings)	
+		firstNames := []string{}
+
+		for _, booking := range bookings {
+			var names = strings.Fields(booking)
+			// var firstName = names[0]
+			firstNames = append(firstNames, names[0])
+
+		}
+
+		fmt.Printf("These are the First names of the bookings: %v \n", firstNames)
 	}
 
-	
-
-	
-	// bookings[0] = firstName + " " + lastName 
+	// bookings[0] = firstName + " " + lastName
 	// fmt.Printf("The elements in the Slice: %v \n",bookings)
 	// fmt.Printf("The first value in the slice is: %v \n",bookings[0])
 	// fmt.Printf("The length of slice is: %v \n",len(bookings))

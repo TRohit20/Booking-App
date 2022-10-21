@@ -56,3 +56,7 @@ For-loop of differnet types which can be used for different cases
 
 *** RANGE is a function in-built that allows us to iterate over any data structure 
 For arrays and slices, it provides or gives back the value of Index and element in it
+
+Feilds is a In-built function from the strings package and it splits a string using a spacer into a array. So we can access the elements using indices
+
+***In Go, We can use underscroll _ to ignore a variable you dont want to use
