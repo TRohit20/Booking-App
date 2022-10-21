@@ -56,8 +56,10 @@ func main(){
 
 	fmt.Printf("only %v tickets remaining \n",remainingTickets)
 
-	fmt.Printf("The elements in the Slice: %v \n",bookings)
-	fmt.Printf("The first value in the slice is: %v \n",bookings[0])
-	fmt.Printf("The length of slice is: %v \n",len(bookings))
-	fmt.Printf("Type of the Slice being: %T \n",bookings)
+	// fmt.Printf("The elements in the Slice: %v \n",bookings)
+	// fmt.Printf("The first value in the slice is: %v \n",bookings[0])
+	// fmt.Printf("The length of slice is: %v \n",len(bookings))
+	// fmt.Printf("Type of the Slice being: %T \n",bookings)
+
+	fmt.Printf("These are all the bookings %v \n",bookings)
 }

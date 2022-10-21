@@ -40,5 +40,9 @@ First, we need to create a Go.mod file that is making it a project
 In GO, everything works in Packages. 
 
 Working with slices is much efficient and better as it is dynamic 
+Another way to declare Slice can be 
+*var ref_var = []data_type{} *
+or 
+* ref_var := []data_type{}
 We dont have to keep track of the indices too. We just use the Append function which is in-built
 Adding or updating values to slices is different but the semantics or syntax of retrieving the value is same as array
