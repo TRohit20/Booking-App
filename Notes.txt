@@ -38,3 +38,7 @@ Due to all this simplicity and speed, GO is becoming popular to write automation
 Running the Go Program:
 First, we need to create a Go.mod file that is making it a project
 In GO, everything works in Packages. 
+
+Working with slices is much efficient and better as it is dynamic 
+We dont have to keep track of the indices too. We just use the Append function which is in-built
+Adding or updating values to slices is different but the semantics or syntax of retrieving the value is same as array

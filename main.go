@@ -10,10 +10,14 @@ func main(){
 	const conferenceTickets = 50
 	var remainingTickets uint = 50
 
-	var bookings [50]string 
+
 	// An alternative i.e Syntactic Sugar, IT ONLY APPLIES TO VAR NOT CONST/CONSTANTS
 	// conferenceName := "Rohit"
 
+	// var bookings [50]string //Array
+
+	var bookings []string  //Slices
+	
 	// fmt.Println("Welcome to ", conferenceName, "booking Application")
 	// Printf instead of 'ln'
 	fmt.Printf("Welcome to %v booking application \n",conferenceName)
@@ -44,14 +48,16 @@ func main(){
 	fmt.Printf("Thank you %v %v for booking %v tickets \n",firstName,lastName,userTickets)
 	fmt.Printf("You will receive a confirmation mail to your mail ID %v \n",email)
 
-	bookings[0] = firstName + " " + lastName
+	// bookings[0] = firstName + " " + lastName 
+
+	bookings = append(bookings, firstName + " " + lastName)
 	
 	remainingTickets -= userTickets
 
 	fmt.Printf("only %v tickets remaining \n",remainingTickets)
 
-	fmt.Printf("The elements in the Array: %v \n",bookings)
-	fmt.Printf("The first value in the array is: %v \n",bookings[0])
-	fmt.Printf("The length of the Array is: %v \n",len(bookings))
-	fmt.Printf("Type of the Array being: %T \n",bookings)
+	fmt.Printf("The elements in the Slice: %v \n",bookings)
+	fmt.Printf("The first value in the slice is: %v \n",bookings[0])
+	fmt.Printf("The length of slice is: %v \n",len(bookings))
+	fmt.Printf("Type of the Slice being: %T \n",bookings)
 }
