@@ -82,7 +82,15 @@ func main() {
 				break
 			}
 		} else {
-			fmt.Println("You entered Invalid details, please check and re-enter")
+			if !validName {
+				fmt.Println("Please enter a valid name ")
+			}
+			if !validMail {
+				fmt.Println("Please provide a valid email ID")
+			}
+			if !validTickets {
+				fmt.Println("PLease enter positive number of tickets")
+			}
 			continue
 		}
 	}
