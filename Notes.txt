@@ -63,6 +63,8 @@ Feilds is a In-built function from the strings package and it splits a string us
 
 Conditional statements like IF else are used to break loops or check things
 
+Similar to conditional statements, we have **Switch** statements
+
 ** Continue ** is used to make the loop skip the remainder of the body and immediately retest its condition
 
 *** USER INPUT VALIDATION 

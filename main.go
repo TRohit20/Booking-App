@@ -101,4 +101,20 @@ func main() {
 	// fmt.Printf("The length of slice is: %v \n",len(bookings))
 	// fmt.Printf("Type of the Slice being: %T \n",bookings)
 
+	// ** Switch cases
+	// var city string
+	// fmt.Println("Enter your city")
+	// fmt.Scan(&city)
+
+	// switch city {
+	// case "Hyderabad":
+	// 	fmt.Println("You choose hyderbad")
+	// case "Bengalore", "Mumbai":
+	// 	fmt.Println("Costly metropoliean cities")
+	// case "Delhi":
+	// 	fmt.Println("Capital of India")
+	// default:
+	// 	fmt.Println("Please choose a valid city")
+	// }
+
 }
