@@ -70,3 +70,13 @@ Similar to conditional statements, we have **Switch** statements
 *** USER INPUT VALIDATION 
 It is must in order to make sure the app handles any bad user input or to make sure the app doesnt crash due to wrong inputs
 so we need to verify the piece of data user provides
+
+To write clean and reusable code, we use Functions
+The process framework of encapsulating code or snippets of code that perform a certain action/function into their own container
+Similar to variable, we need to give functions a descriptive name to access it or call it.
+Func keyword is used to create them 
+they reduce code duplication
+can be called any no of times you want 
+It will only execute when called
+Function can be created with Parameters, where parameters are given in the brackets and given as input 
+In GO, You can return MULTIPLE number of values from a single function. 
