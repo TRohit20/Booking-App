@@ -12,4 +12,4 @@ A simple booking app built using Golang to gain comprehensive knowledge of Golan
 2. [TechWorld with Nana](https://www.youtube.com/watch?v=yyUHQIec83I)
 
 # Projects oriented learning tutorial
---> [Treecodecamp](https://www.youtube.com/watch?v=jFfo23yIWac)
+--> [Freecodecamp](https://www.youtube.com/watch?v=jFfo23yIWac)
