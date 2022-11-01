@@ -90,6 +90,8 @@ These are variables that are defined or declared at the top, outside of all func
 Defining them on a package level
 --> Package level variables cannot be created using ":=", they need to be declared with var or const 
 
+-->  Scope: Variables and functions defined outside any function, can be accessed in all other files within the same package.
+
 Best Practise though is to create local variables which are accessible only by the function or scope of it.
 
 Above, we just used functions to encapsulate logic and make the code cleaner and nicer
@@ -97,3 +99,12 @@ Above, we just used functions to encapsulate logic and make the code cleaner and
 cleaner code
 Grouping of logic 
 Reusing of code to prevent duplication 
+
+*** We can create a package that can consist of one or more go files to make developing apps or large logics easier
+--> Go programs can be organized into packages 
+--> A package is a collection of Go programs
+
+IMPORTANT POINT: Let us say we are writing a logic for different Go programs or files. It is the same logic. So, in order to reuse the program, we use something called Helper function which will have code that can be reused 
+
+When running multiple files or go prorgams you have to call them in the terminal too.
+But it becomes redundant, we can use '.' to run the entire current directory

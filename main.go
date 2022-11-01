@@ -122,13 +122,6 @@ func bNames() []string {
 	return firstNames
 }
 
-func userInValid(firstName string, lastName string, email string, userTickets uint) (bool, bool, bool) {
-	validName := len(firstName) >= 2 && len(lastName) >= 2
-	validMail := strings.Contains(email, "@")
-	validTickets := userTickets > 0 && userTickets <= remainingTickets
-	return validName, validMail, validTickets
-}
-
 func bookTicket(firstName string, lastName string, userTickets uint, email string) {
 	bookings = append(bookings, firstName+" "+lastName)
 	remainingTickets -= userTickets
