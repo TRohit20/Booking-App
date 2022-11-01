@@ -1,6 +1,7 @@
 package main
 
 import (
+	"booking-app/helper"
 	"fmt"
 	"strings"
 )
@@ -10,7 +11,7 @@ var conferenceName = "Rohit's Crowd Work"
 
 const conferenceTickets = 50
 
-var remainingTickets uint = 50
+var RemainingTickets uint = 50
 var bookings []string //Slices
 
 // HOw do you know which input or file we need is in which package?
@@ -31,10 +32,10 @@ func main() {
 	// fmt.Printf("Welcome to %v booking application \n", conferenceName)
 	// Taking a input, We do that using scan func and pointer
 
-	for remainingTickets > 0 || len(bookings) < 50 {
+	for RemainingTickets > 0 || len(bookings) < 50 {
 
 		firstName, lastName, email, userTickets := takeInput()
-		validName, validMail, validTickets := userInValid(firstName, lastName, email, userTickets)
+		validName, validMail, validTickets := helper.UserInValid(firstName, lastName, email, userTickets, RemainingTickets)
 
 		if validMail && validName && validTickets {
 
@@ -46,7 +47,7 @@ func main() {
 
 			// Boolean expression
 			// var soldOut bool = remainingTickets == 0
-			soldOut := remainingTickets == 0
+			soldOut := RemainingTickets == 0
 			if soldOut {
 				fmt.Println("Sorry, The tickets for the conference are all sold. Better luck next time")
 				break
@@ -91,7 +92,7 @@ func main() {
 
 func greet() {
 	fmt.Printf("Welcome to %v's Ticket booking application \n", conferenceName)
-	fmt.Println("We have a total of", conferenceTickets, "tickets, of which only ", remainingTickets, " are remaining")
+	fmt.Println("We have a total of", conferenceTickets, "tickets, of which only ", RemainingTickets, " are remaining")
 	fmt.Println("Hurry up! & Get your tickets here")
 }
 
@@ -124,9 +125,9 @@ func bNames() []string {
 
 func bookTicket(firstName string, lastName string, userTickets uint, email string) {
 	bookings = append(bookings, firstName+" "+lastName)
-	remainingTickets -= userTickets
+	RemainingTickets -= userTickets
 
 	fmt.Printf("Thank you %v %v for booking %v tickets \n", firstName, lastName, userTickets)
 	fmt.Printf("You will receive a confirmation mail to your mail ID %v \n", email)
-	fmt.Printf("only %v tickets remaining \n", remainingTickets)
+	fmt.Printf("only %v tickets remaining \n", RemainingTickets)
 }

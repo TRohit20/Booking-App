@@ -108,3 +108,15 @@ IMPORTANT POINT: Let us say we are writing a logic for different Go programs or 
 
 When running multiple files or go prorgams you have to call them in the terminal too.
 But it becomes redundant, we can use '.' to run the entire current directory
+
+Having multiple packages in your application:
+Example: We have multiple conferences that all have different logics and maybe one or two common functions.
+So, we can create packages for multiple conferences and have a common helper function 
+This allows you to group the code and organize your app
+Multiple packages are often created using folders
+To import the functions from one custom package of ours, we need to copy the address or name as path and mention it such as:
+ "booking-app/helper"
+
+ And to use it, we need to explicitly export the function (Eg: In Java, Public, Private and Protexted keywords).
+
+ Exporting a function is very easy. We just CAPITALISE the 1st letter of the function
