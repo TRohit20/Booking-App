@@ -80,3 +80,20 @@ can be called any no of times you want
 It will only execute when called
 Function can be created with Parameters, where parameters are given in the brackets and given as input 
 In GO, You can return MULTIPLE number of values from a single function. 
+
+Make code cleaner using Packages:
+***Package level variables:
+These are the type of variables commonly shared among multiple functions 
+
+So, creating variables in such a place that it is accessible for both main functions and other functions.
+These are variables that are defined or declared at the top, outside of all functions
+Defining them on a package level
+--> Package level variables cannot be created using ":=", they need to be declared with var or const 
+
+Best Practise though is to create local variables which are accessible only by the function or scope of it.
+
+Above, we just used functions to encapsulate logic and make the code cleaner and nicer
+--> More use cases of functions:
+cleaner code
+Grouping of logic 
+Reusing of code to prevent duplication 

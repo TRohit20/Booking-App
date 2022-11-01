@@ -5,23 +5,26 @@ import (
 	"strings"
 )
 
+// Package level variables declaration
+var conferenceName = "Rohit's Crowd Work"
+
+const conferenceTickets = 50
+
+var remainingTickets uint = 50
+var bookings []string //Slices
+
 // HOw do you know which input or file we need is in which package?
 // Google it or simple read in the GOlang Documentaion
 
 func main() {
-	var conferenceName = "Rohit's Crowd Work"
-	const conferenceTickets = 50
-	var remainingTickets uint = 50
 
 	// An alternative i.e Syntactic Sugar, IT ONLY APPLIES TO VAR NOT CONST/CONSTANTS
 	// conferenceName := "Rohit"
 
 	// var bookings [50]string //Array
 
-	var bookings []string //Slices
-
 	// Calling a function
-	greet(conferenceName, conferenceTickets, int(remainingTickets))
+	greet()
 
 	// fmt.Println("Welcome to ", conferenceName, "booking Application")
 	// Printf instead of 'ln'
@@ -31,14 +34,14 @@ func main() {
 	for remainingTickets > 0 || len(bookings) < 50 {
 
 		firstName, lastName, email, userTickets := takeInput()
-		validName, validMail, validTickets := userInValid(firstName, lastName, email, int(userTickets), int(remainingTickets))
+		validName, validMail, validTickets := userInValid(firstName, lastName, email, userTickets)
 
 		if validMail && validName && validTickets {
 
-			bookTicket(bookings, firstName, lastName, remainingTickets, userTickets, email)
+			bookTicket(firstName, lastName, userTickets, email)
 
 			// Calling a function to go through the bookings array to print names of bookings
-			firstNames := bNames(bookings)
+			firstNames := bNames()
 			fmt.Printf("These are the First names of the bookings: %v \n", firstNames)
 
 			// Boolean expression
@@ -86,9 +89,9 @@ func main() {
 
 }
 
-func greet(confName string, conftickets int, remTicks int) {
-	fmt.Printf("Welcome to %v's Ticket booking application \n", confName)
-	fmt.Println("We have a total of", conftickets, "tickets, of which only ", remTicks, " are remaining")
+func greet() {
+	fmt.Printf("Welcome to %v's Ticket booking application \n", conferenceName)
+	fmt.Println("We have a total of", conferenceTickets, "tickets, of which only ", remainingTickets, " are remaining")
 	fmt.Println("Hurry up! & Get your tickets here")
 }
 
@@ -109,7 +112,7 @@ func takeInput() (string, string, string, uint) {
 	return firstName, lastName, email, userTickets
 }
 
-func bNames(bookings []string) []string {
+func bNames() []string {
 	firstNames := []string{}
 	for _, booking := range bookings {
 		var names = strings.Fields(booking)
@@ -119,14 +122,14 @@ func bNames(bookings []string) []string {
 	return firstNames
 }
 
-func userInValid(firstName string, lastName string, email string, userTickets int, remainingTickets int) (bool, bool, bool) {
+func userInValid(firstName string, lastName string, email string, userTickets uint) (bool, bool, bool) {
 	validName := len(firstName) >= 2 && len(lastName) >= 2
 	validMail := strings.Contains(email, "@")
 	validTickets := userTickets > 0 && userTickets <= remainingTickets
 	return validName, validMail, validTickets
 }
 
-func bookTicket(bookings []string, firstName string, lastName string, remainingTickets uint, userTickets uint, email string) {
+func bookTicket(firstName string, lastName string, userTickets uint, email string) {
 	bookings = append(bookings, firstName+" "+lastName)
 	remainingTickets -= userTickets
 
