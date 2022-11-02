@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -11,7 +12,7 @@ var conferenceName = "Rohit's Crowd Work"
 const conferenceTickets = 50
 
 var RemainingTickets uint = 50
-var bookings []string //Slices
+var bookings = make([]map[string]string, 0)
 
 // HOw do you know which input or file we need is in which package?
 // Google it or simple read in the GOlang Documentaion
@@ -115,6 +116,7 @@ func takeInput() (string, string, string, uint) {
 func bNames() []string {
 	firstNames := []string{}
 	for _, booking := range bookings {
+		booking["firstName"]
 		var names = strings.Fields(booking)
 		// var firstName = names[0]
 		firstNames = append(firstNames, names[0])
@@ -123,7 +125,14 @@ func bNames() []string {
 }
 
 func bookTicket(firstName string, lastName string, userTickets uint, email string) {
-	bookings = append(bookings, firstName+" "+lastName)
+	// Creating a MAP for a user
+	var userData = make(map[string]string)
+	userData["firstName"] = firstName
+	userData["lastName"] = lastName
+	userData["email"] = email
+	userData["noOfTickets"] = strconv.FormatUint(uint64(userTickets), 10)
+
+	bookings = append(bookings, userData)
 	RemainingTickets -= userTickets
 
 	fmt.Printf("Thank you %v %v for booking %v tickets \n", firstName, lastName, userTickets)

@@ -128,3 +128,12 @@ To import the functions from one custom package of ours, we need to copy the add
 1. Local: The variables that are locally defined or declared inside a function or block of code, so it can be used or accessed inside them only
 2. Package: declared outside the functions which can be accessed by any funciton in the package
 3. Global: Declared outside all functions and uppercase firstletter, these can be used everywhere across packages of the project folder.
+
+*** Maps: A construct data type
+--> The type of data type that allows you to store key values pairs. 
+--> Maps unique keys to values
+--> You can retrieve the value by using its key later
+    syntax: var ref_var = make(map[data_type]data_type)
+--> All keys have the same data type 
+--> All values have the same data type 
+--> You cannot mix data types 
