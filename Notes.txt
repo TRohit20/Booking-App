@@ -120,3 +120,11 @@ To import the functions from one custom package of ours, we need to copy the add
  And to use it, we need to explicitly export the function (Eg: In Java, Public, Private and Protexted keywords).
 
  Exporting a function is very easy. We just CAPITALISE the 1st letter of the function
+
+
+ Variable Scope: 
+ Scope is the region of program where a defined variable is accessible 
+ Levels of Scopes:
+1. Local: The variables that are locally defined or declared inside a function or block of code, so it can be used or accessed inside them only
+2. Package: declared outside the functions which can be accessed by any funciton in the package
+3. Global: Declared outside all functions and uppercase firstletter, these can be used everywhere across packages of the project folder.
