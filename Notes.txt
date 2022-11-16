@@ -129,7 +129,8 @@ To import the functions from one custom package of ours, we need to copy the add
 2. Package: declared outside the functions which can be accessed by any funciton in the package
 3. Global: Declared outside all functions and uppercase firstletter, these can be used everywhere across packages of the project folder.
 
-*** Maps: A construct data type
+*** Maps:
+A construct data type
 --> The type of data type that allows you to store key values pairs. 
 --> Maps unique keys to values
 --> You can retrieve the value by using its key later
@@ -137,3 +138,57 @@ To import the functions from one custom package of ours, we need to copy the add
 --> All keys have the same data type 
 --> All values have the same data type 
 --> You cannot mix data types 
+--> Maps are dynamic so size can increase as we progress
+
+
+***Struct: 
+Another data type of Golang, stands for 'Structure'
+Let us say we need to collect different types of data types, we can use struct
+can hold mixed data types.
+
+Syntax: 
+       type ref_var struct {
+        key1 data_type 
+        key2 data_type 
+        key3 data_type 
+       }
+Using 'type' keyword, we are making a custom new type. 
+Struct allows you to have custom type that defines what the user type should exactly look like
+Predefined structure by listing all properties it should have
+Struct can be compared to classes in Java
+You can access items of struct using '.'
+
+***Concurrency:
+Let us say, the user bought a ticket, now let us create a processing task where the user will get their ticket mailed to them as confirmation
+
+Sleep function is a function that stops or blocks the current thread execution for the defined duration
+sleep function is imported from 'time' package
+
+Handling this blocking code with Goroutines!
+
+Goroutines:
+if the application would have to concurrently deal with bookings then this performance would not be good.
+So, we need concurrency which is cheap and easy using GO
+So, we run or execute a function in a seperate thread, multiple threads will be created till the execution is done and thread is deleted after work is done
+We create concurrency by using "go" keyword
+
+Synchronizing the Goroutines-- Waitgroup:
+we use it as it waits for launched goroutine to finish 
+It is imported from the sync package
+Some in-built funcitons of waitgroup are:
+ADD: sets the no of goroutines to wait for(increases counter by provied number)
+     This is written before goroutine and provided with counter number
+wait: Blocks the thread until the waitgroup counter is 0
+      This is written at the end of the function 
+DONE: Decrements the wait counter by 1 
+     this is written at the end, inside the goroutine function 
+
+
+How is concurrnecy in Go better than Java or any other language?
+It is simple to write and easy to manage.
+It uses something called Green thread meaning it is a abstraction of the actual thread called goroutines
+So,we are interacting with go runtime or high-level goroutines
+Cheaper and lightweight
+SO way better than OS threads which are used by other languages like Java
+Go also has channels for easy communication medium or way to talk to eachother
+Allows you to handle concurrnecy issues which may occur when using shared data 
